@@ -1,11 +1,14 @@
 import {Injectable} from "@nestjs/common";
+import {CuentaPostRequest} from "./cuentaPost.request";
+import CuentaFactory from "../factory/cuenta.factory";
 
 @Injectable()
 export class CuentaCreator {
-    constructor() {}
+    constructor( private entity : CuentaFactory) {}
 
-    invoke() {
-        console.log('yahooo!!!!')
+    handler(request: CuentaPostRequest) {
+        const cuenta = this.entity.crearCuenta(request)
+        console.log('yahooo!!!!', request, cuenta)
     }
 
 }

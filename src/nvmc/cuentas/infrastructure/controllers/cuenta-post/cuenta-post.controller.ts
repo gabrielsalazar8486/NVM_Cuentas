@@ -9,7 +9,7 @@ export class CuentaPostController {
     @Post()
     createCuenta(@Body() params : CuentaPostRequest)
     {
-        this.creator.invoke()
+        this.creator.handler(params);
         return {
             'mensage': 'createCuenta',
             'params' : params
