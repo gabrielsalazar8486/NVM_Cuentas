@@ -8,10 +8,6 @@ import {TypeOrmCuentasRepository} from "../infrastructure/Persistence/typeOrmCue
     providers:[
         CuentaFactory,
         CuentaCreator,
-        {
-            provide: 'CuentasRepository',
-            useClass: TypeOrmCuentasRepository
-        }
     ],
     exports:[
         CuentaFactory,
