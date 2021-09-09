@@ -1,8 +1,3 @@
-import {IsNumber, IsString} from "class-validator";
+import {CuentaRequest} from "../../../shared/application/cuenta.request";
 
-export class CuentaPostRequest {
-    @IsString() id: string;
-    @IsString() nombre: string;
-    @IsString() codigo:string;
-    @IsNumber() saldo: number;
-}
+export class CuentaPostRequest extends CuentaRequest{}

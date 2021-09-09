@@ -20,7 +20,14 @@ export class TypeOrmCuentasRepository implements CuentasRepository{
     {
 
     }
-    find(id: string){
+    async find(): Promise<CuentaEntity[]>
+    {
+        return await this.cuentas.find() ;
+
+    }
+    async findOne(id: string)
+    {
+        return await this.cuentas.findOne(id) ;
 
     }
 }

@@ -1,7 +1,7 @@
 import {Module} from "@nestjs/common";
 import {CuentaPostController} from "./controllers/cuenta-post/cuenta-post.controller";
 import {CuentaGetController} from "./controllers/cuenta-get/cuenta-get.controller";
-import {CuentasGetControllerController} from "./controllers/cuentas-get/cuentas-get-controller.controller";
+import {CuentasGetController} from "./controllers/cuentas-get/cuentas-get.controller";
 import {CuentasAplicationModule} from "../application/cuentasAplication.module";
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {CuentaEntity} from "./Entitis/cuenta.enity";
@@ -16,7 +16,7 @@ import {TypeOrmCuentasRepository} from "./Persistence/typeOrmCuentas.repository"
     controllers:[
         CuentaPostController,
         CuentaGetController,
-        CuentasGetControllerController
+        CuentasGetController
     ],
     providers:[
         TypeOrmCuentasRepository

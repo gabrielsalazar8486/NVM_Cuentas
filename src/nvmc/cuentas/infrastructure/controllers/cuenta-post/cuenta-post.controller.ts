@@ -14,6 +14,7 @@ export class CuentaPostController {
     createCuenta(@Body() params : CuentaPostRequest)
     {
         this.creator.handler(params, this.repository);
+
         return {
             'mensage': 'createCuenta',
             'params' : params
