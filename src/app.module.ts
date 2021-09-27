@@ -5,18 +5,7 @@ import { CuentasModule } from './nvmc/cuentas/cuentas.module';
 import {TypeOrmModule} from "@nestjs/typeorm";
 
 @Module({
-  imports: [CuentasModule,
-    TypeOrmModule.forRoot({
-      type:'mysql',
-      host:'localhost',
-      port:3306,
-      username: 'mnonline01',
-      password: 'mnonline03',
-      database:'nvm_cuentas',
-      entities:[__dirname + './**/**/*entity{.ts,.js}'],
-      autoLoadEntities: true,
-      synchronize:true
-    })],
+  imports: [CuentasModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -4,7 +4,6 @@ import {InjectRepository} from "@nestjs/typeorm";
 import {CuentaEntity} from "../Entitis/cuenta.enity";
 import {Injectable} from "@nestjs/common";
 import {Repository} from "typeorm";
-import any = jasmine.any;
 
 @Injectable()
 export class TypeOrmCuentasRepository implements CuentasRepository{
